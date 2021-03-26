@@ -2,7 +2,7 @@
   <!-- hard code the route -->
   <router-link
     :to="`/listing/${data.id}`"
-    class="listing flex a-center undecorated"
+    class="listing flex a-center undecorated slide-in-right"
   >
     <div class="img-container" :style="{ backgroundColor: data.color }">
       <img

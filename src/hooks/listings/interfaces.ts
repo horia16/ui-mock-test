@@ -10,6 +10,7 @@ export interface Animal {
   breed: string;
   age: number;
   thumbnail: string;
+  photoSets: Array<String>;
   owner: AnimalOwner;
   gender: "male" | "female";
 }

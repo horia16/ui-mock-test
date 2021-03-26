@@ -33,6 +33,12 @@ async function getAll(animalType: string) {
           breed: "Abyssinian cat",
           age: 2,
           thumbnail: "/images/cat_1.png",
+          photoSets: [
+            "/images/cat_1.png",
+            "/images/cat_2.png",
+            "/images/cat_3.png",
+            "/images/cat_4.png",
+          ],
           gender: "female",
           owner: {
             id: 1,
@@ -54,6 +60,12 @@ async function getAll(animalType: string) {
           breed: "Abyssinian cat",
           age: 1.5,
           thumbnail: "/images/cat_2.png",
+          photoSets: [
+            "/images/cat_1.png",
+            "/images/cat_2.png",
+            "/images/cat_3.png",
+            "/images/cat_4.png",
+          ],
           gender: "male",
           owner: {
             id: 1,
@@ -75,6 +87,12 @@ async function getAll(animalType: string) {
           breed: "Abyssinian cat",
           age: 3.5,
           thumbnail: "/images/cat_3.png",
+          photoSets: [
+            "/images/cat_1.png",
+            "/images/cat_2.png",
+            "/images/cat_3.png",
+            "/images/cat_4.png",
+          ],
           gender: "female",
           owner: {
             id: 1,
@@ -96,6 +114,12 @@ async function getAll(animalType: string) {
           breed: "Abyssinian cat",
           age: 3.2,
           thumbnail: "/images/cat_4.png",
+          photoSets: [
+            "/images/cat_1.png",
+            "/images/cat_2.png",
+            "/images/cat_3.png",
+            "/images/cat_4.png",
+          ],
           gender: "male",
           owner: {
             id: 1,
@@ -105,7 +129,6 @@ async function getAll(animalType: string) {
         },
       },
     ];
-
     awaitingData.value = false;
   }, 200);
 }

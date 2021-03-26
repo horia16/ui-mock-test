@@ -1,19 +1,27 @@
 <template>
-  <div v-if="listings.awaitingData">
-    <!-- Again a loader or a spinner -->
+  <div v-if="listings.awaitingData" class="cover-screen flex a-center j-center">
+    <spinner />
   </div>
   <div v-else-if="listing">
     <div
       class="listing-img-wrapper flex"
       :style="{ backgroundColor: listing.color }"
     >
-      <img
+      <image-changer
+        :sources="[listing.animal.thumbnail, ...listing.animal.photoSets]"
+      />
+      <!-- <img
         :src="listing.animal.thumbnail"
         :alt="`Picture of ${listing.animal.name}`"
-      />
+      /> -->
     </div>
+    <button class="back-button" @click="$router.back()">
+      <icon name="akar-icons:arrow-left" />
+    </button>
     <div class="listing-view">
-      <div class="animal-details-container f-grow flex f-col a-start">
+      <div
+        class="animal-details-container f-grow flex f-col a-start slide-in-fwd"
+      >
         <div class="flex j-between w-100 mb-1 a-center">
           <div class="bold fs-xx-large c-black-transparent-80">
             {{ listing.animal.name }}
@@ -39,12 +47,12 @@
           </div>
         </div>
 
-        <div class=" bold flex c-black-transparent-40">
+        <div class="bold flex c-black-transparent-40">
           <icon name="el:map-marker" class="c-primary mr-2" />Distance:
           {{ listing.distance }} km
         </div>
       </div>
-      <div class="owner-container flex">
+      <div class="owner-container flex slide-in-fwd">
         <img
           src="https://amo-dating.com/img/avatar-245px-sample.jpg"
           alt="Owner's picture"
@@ -65,7 +73,7 @@
         </div>
       </div>
       <div
-        class="flex a-start p-8  c-black-transparent-60 fs-small text-justify"
+        class="flex a-start p-8  c-black-transparent-60 fs-small text-justify slide-in-fwd"
       >
         {{ listing.description }}
       </div>
@@ -74,6 +82,8 @@
 </template>
 <script lang="ts">
 import Icon from "@/components/Icon.vue";
+import ImageChanger from "@/components/image-changer/ImageChanger.vue";
+import Spinner from "@/components/Spinner.vue";
 import listings from "@/hooks/listings";
 import { computed, defineComponent, Ref, ref } from "vue";
 export default defineComponent({
@@ -81,7 +91,7 @@ export default defineComponent({
   props: {
     id: { type: String, required: true },
   },
-  components: { Icon },
+  components: { Icon, Spinner, ImageChanger },
   setup(props) {
     // We would do a listing.get(id); but since this is only an example I'll just use the
     // hardcoded values
@@ -109,15 +119,15 @@ export default defineComponent({
   padding: 1rem;
 }
 .listing-img-wrapper {
-  width: 100%;
-  height: 25rem;
-  box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.1) inset;
-  img {
-    margin-top: 1rem;
-    width: 100%;
-    height: 75%;
-    object-fit: contain;
-  }
+  // width: 100%;
+  // height: 25rem;
+  // box-shadow: 0 0 40px 20px rgba(0, 0, 0, 0.1) inset;
+  // img {
+  //   margin-top: 1rem;
+  //   width: 100%;
+  //   height: 75%;
+  //   object-fit: contain;
+  // }
 }
 .animal-details-container {
   width: 80%;

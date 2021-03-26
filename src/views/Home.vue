@@ -1,20 +1,19 @@
 <template>
   <div>
     <div class="location-box flex f-col j-center">
-      <h1 class="mb-1 fs-large">
+      <h1 class="mb-0 fs-large regular">
         Location
       </h1>
-      <h2 class="mt-1 fs-xl-large light flex j-center">
+      <h2 class="mt-0 fs-xl-large light flex j-center c-black-transparent-60">
         <icon name="el:map-marker" class="mr-5 c-primary" />
         <span class="bold">Kyiv,</span> Ukraine
       </h2>
     </div>
-    <div class="content-box">
-      <!-- We should show a loading indicator while we are waiting for the api data -->
-      <div class="loading" v-if="listings.awaitngData">
-        <!-- Loading component EG spinner -->
-      </div>
-      <div v-else class="pb-8">
+    <div v-if="listings.awaitingData">
+      <spinner />
+    </div>
+    <div v-else class="content-box slide-in-fwd">
+      <div class="pb-8">
         <div class="category-selector">
           <selector-button
             v-for="(animal, index) in listings.animalTypes"
@@ -42,9 +41,10 @@ import listings from "@/hooks/listings";
 import Listing from "@/components/Listing.vue";
 import Icon from "@/components/Icon.vue";
 import SelectorButton from "@/components/SelectorButton.vue";
+import Spinner from "@/components/Spinner.vue";
 export default defineComponent({
   name: "Home",
-  components: { Listing, Icon, SelectorButton },
+  components: { Listing, Icon, SelectorButton, Spinner },
   props: {
     // type: { type: String, required: true },
   },
@@ -78,6 +78,6 @@ export default defineComponent({
   right: 0;
   top: 4rem;
   overflow-x: auto;
-  padding-top: 4rem;
+  padding-top: 2.5rem;
 }
 </style>

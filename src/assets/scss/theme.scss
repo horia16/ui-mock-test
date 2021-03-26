@@ -36,3 +36,25 @@ input[type="search"],
   height: 60px;
   border-radius: 100%;
 }
+
+.back-button {
+  position: absolute;
+  z-index: 2;
+  top: 1rem;
+  left: 1rem;
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  background-color: transparent;
+  color: #333333; // Can't make it transparent as the svg is overlapping :(
+  border-radius: 100%;
+  transition: all 0.2s;
+  outline: none;
+  &:focus {
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+}

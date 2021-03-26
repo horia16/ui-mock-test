@@ -13,12 +13,53 @@
   }
 }
 
+// these are named like this for vue transitions but we don't need to use that in this case
 .slide-in-fwd-bottom-enter-active {
   animation: slide-in-fwd-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 .slide-in-fwd-bottom-leave-active {
   animation: slide-out-bck-bottom 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53)
     both;
+}
+
+.slide-in-fwd {
+  animation: slide-in-fwd 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-fwd {
+  0% {
+    transform: translateZ(-1400px) translateY(800px);
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+  }
+}
+
+// We can apply this to the listings
+.slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 500ms;
+}
+// We could do some cool stuff with this using the intersection
+// observer api but this is to much work for the example so we are just going to "mock it"
+
+.slide-in-right:nth-child(2) {
+  animation-delay: 600ms;
+}
+.slide-in-right:nth-child(3) {
+  animation-delay: 700ms;
+}
+.slide-in-right:nth-child(4) {
+  animation-delay: 800ms;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateZ(-1400px) translateX(800px);
+  }
+  100% {
+    transform: translateZ(0) translateX(0);
+  }
 }
 
 @keyframes slide-in-fwd-bottom {
