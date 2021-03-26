@@ -1,0 +1,38 @@
+@import "./vars.scss";
+@import "./utils.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  color: rgb(32, 32, 32);
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+textarea,
+button,
+input.text,
+select,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="search"],
+.input-checkbox {
+  -webkit-appearance: none;
+  font-family: "Poppins", sans-serif;
+}
+
+// we want to reuse this class
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}

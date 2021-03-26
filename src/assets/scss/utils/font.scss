@@ -1,0 +1,102 @@
+.fs-xs-small {
+  font-size: 0.4rem;
+}
+.fs-x-small {
+  font-size: 0.6rem;
+}
+.fs-small {
+  font-size: 0.8rem;
+}
+.fs-regular {
+  font-size: 1rem;
+}
+.fs-large {
+  font-size: 1.2rem;
+}
+.fs-x-large {
+  font-size: 1.4rem;
+}
+.fs-xx-large {
+  font-size: 1.6rem;
+}
+.fs-xxx-large {
+  font-size: 1.8rem;
+}
+.fs-xl-large {
+  font-size: 2rem;
+}
+.fs-xxl-large {
+  font-size: 2.5rem;
+}
+.fs-xll-large {
+  font-size: 3rem;
+}
+.c-transparent {
+  color: rgba(255, 255, 255, 0.7);
+}
+.c-white {
+  color: white;
+}
+
+.c-error {
+  color: var(--color-error);
+}
+
+.c-success {
+  color: var(--color-success);
+}
+
+.c-warning {
+  color: var(--color-warning);
+}
+.c-primary {
+  color: var(--color-primary);
+}
+.c-secondary {
+  color: var(--color-secondary);
+}
+.c-tertiary {
+  color: var(--color-tertiary);
+}
+
+.regular {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+
+.light {
+  font-weight: 300;
+}
+.italic {
+  font-style: italic;
+}
+.text-center {
+  text-align: center;
+}
+.undecorated {
+  text-decoration: none;
+}
+.text-left {
+  text-align: left;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-shadow {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.c-black-transparent-80 {
+  color: rgba(0, 0, 0, 0.8);
+}
+.c-black-transparent-60 {
+  color: rgba(0, 0, 0, 0.6);
+}
+.c-black-transparent-40 {
+  color: rgba(0, 0, 0, 0.4);
+}
+.c-black-transparent-20 {
+  color: rgba(0, 0, 0, 0.2);
+}

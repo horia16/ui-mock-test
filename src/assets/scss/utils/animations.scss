@@ -1,0 +1,45 @@
+.spin {
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.slide-in-fwd-bottom-enter-active {
+  animation: slide-in-fwd-bottom 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.slide-in-fwd-bottom-leave-active {
+  animation: slide-out-bck-bottom 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+}
+
+@keyframes slide-in-fwd-bottom {
+  0% {
+    transform: translateZ(-1400px) translateY(800px) scale(0, 0);
+
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0) translateY(0) scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out-bck-bottom {
+  0% {
+    transform: translateZ(0) translateY(0) scale(1, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-1100px) translateY(1000px) scale(0, 0);
+    opacity: 0;
+  }
+}

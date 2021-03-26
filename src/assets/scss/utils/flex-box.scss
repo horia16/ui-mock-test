@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+}
+.f-row {
+  flex-direction: row;
+}
+.f-col {
+  flex-direction: column;
+}
+.f-grow {
+  flex-grow: 1;
+}
+.f-row-reverse {
+  flex-direction: row-reverse;
+}
+.j-center {
+  justify-content: center;
+}
+.j-end {
+  justify-content: flex-end;
+}
+.j-between {
+  justify-content: space-between;
+}
+.a-center {
+  align-items: center;
+}
+.a-start {
+  align-items: flex-start;
+}
+.a-end {
+  align-items: flex-end;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
